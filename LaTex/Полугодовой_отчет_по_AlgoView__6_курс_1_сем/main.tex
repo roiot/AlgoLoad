@@ -1,0 +1,100 @@
+\documentclass{sintefbeamer}
+
+%%% Работа с русским языком
+% \usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T1,T2A]{fontenc}	    % кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{indentfirst}
+% \frenchspacing
+
+%%% JSON lstlisting
+\usepackage{bera} % optional: just to have a nice mono-spaced font
+\usepackage{listings}
+\usepackage{xcolor}
+
+% animeted images
+% https://tex.stackexchange.com/questions/7602/how-to-add-a-gif-file-to-my-latex-file
+\usepackage{animate}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    % basicstyle=\normalfont\ttfamily,
+    % numbers=left,
+    % numberstyle=\scriptsize,
+    % stepnumber=1,
+    % numbersep=8pt,
+    % showstringspaces=false,
+    % breaklines=true,
+    % frame=lines,
+    % backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+
+% default meta-data
+% \title{PolyU Beamer\\ Presentation Theme}
+% \subtitle{Using \LaTeX\ to prepare slides}
+% \author{\href{mailto:qilong-kirov.liu@connect.polyu.hk}{LIU Qi-long (Kirov)}}
+% \date{Created on May 22, 2022}
+% \titlebackground{images/background}
+
+
+% my meta-data
+% \title{Полугодовой отчет о работе в \\ семестре над проектом AlgoLoad}
+% \subtitle{Полугодовой отчет о работе}
+% \title{Продолжение разработки системы\\3D-визуализации информационных\\графов алгоритмов AlgoView и\\адаптация под систему AlgoLoad}
+% \title{Продолжение разработки системы\\3D-визуализации информационных\\графов алгоритмов AlgoView}
+
+
+\titlebackground{images/background}
+
+
+% 4. Система трехмерной визуализации и интерактивного анализа информационных графов алгоритмов.
+% Доклад техника Скрябина Г.Д., техника Гадиевой Т.Р., вед.науч.сотр. Антонова А.С.
+
+
+% document body
+\begin{document}
+\maketitle
+
+% \include{PolyU Presentation/slides_old}
+
+\include{PolyU Presentation/slide1}
+\include{PolyU Presentation/slide2_0}
+\include{PolyU Presentation/slide2_1}
+\include{PolyU Presentation/slide2_2}
+\include{PolyU Presentation/slide2_3}
+\include{PolyU Presentation/slide2}
+\include{PolyU Presentation/slide3}
+\include{PolyU Presentation/slide4_0}
+\include{PolyU Presentation/slide4}
+\include{PolyU Presentation/slide5}
+\include{PolyU Presentation/slide6}
+\include{PolyU Presentation/slide7}
+\include{PolyU Presentation/slide8}
+
+\backmatter
+
+\end{document}
